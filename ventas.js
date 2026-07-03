@@ -10,29 +10,32 @@ function calcularComision(numeroVentas, precioProducto) {
     }
 }
 
-function calcular(){
+function calcular() {
     // recuperamos propiedades de las cajas de texo
-    let componenteSueldoBase=document.getElementById("txtSueldoBase");
-    let componenteVentas = document.getElementById("txtVentas");
-    let componentePrecio = document.getElementById("txtPrecio");
-    
+    //let componenteSueldoBase=document.getElementById("txtSueldoBase");
+    //let componenteVentas = document.getElementById("txtVentas");
+    //let componentePrecio = document.getElementById("txtPrecio");
+
     // recuperamos el valor
-    let sueldoBaseStr=componenteSueldoBase.value;
-    let ventasStr=componenteVentas.value;
-    let precioStr=componentePrecio.value;
+    //let sueldoBaseStr=componenteSueldoBase.value;
+    //let ventasStr=componenteVentas.value;
+    //let precioStr=componentePrecio.value;
 
-    //convertir texto a numero
-    let sueldoBase = parseFloat(sueldoBaseStr);
-    let numeroVentas = parseFloat(ventasStr);
-    let precioProducto = parseFloat(precioStr);
+    //let sueldoBaseStr = recuperarTexto("txtSueldoBase")
+    //let ventasStr = recuperarTexto("txtVentas")
+    //let precioStr = recuperarTexto("txtPrecio")
 
-    let comision = calcularComision(numeroVentas,precioProducto);
+    let sueldoBase = recuperarFloat("txtSueldoBase");
+    let numeroVentas = recuperarFloat("txtVentas");
+    let precioProducto = recuperarFloat("txtPrecio");
 
-    let total = sueldoBase+comision;
+    let comision = calcularComision(numeroVentas, precioProducto);
 
-    let spSueldoBase=document.getElementById("spSueldoBase");
-    let spComision=document.getElementById("spComision");
-    let spTotal=document.getElementById("spTotal");
+    let total = sueldoBase + comision;
+
+    let spSueldoBase = document.getElementById("spSueldoBase");
+    let spComision = document.getElementById("spComision");
+    let spTotal = document.getElementById("spTotal");
 
     spSueldoBase.textContent = sueldoBase;
     spComision.textContent = comision;
