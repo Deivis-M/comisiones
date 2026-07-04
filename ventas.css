@@ -146,3 +146,10 @@ span {
         padding: 11px 12px;
     }
 }
+
+.error{
+    color: red;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 3px;
+}
